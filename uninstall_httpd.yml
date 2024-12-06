@@ -1,0 +1,9 @@
+---
+- name: My test playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: uninstalling httpd package
+    yum:
+     name: httpd
+     state: removed  

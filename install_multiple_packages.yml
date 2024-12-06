@@ -1,0 +1,10 @@
+---
+- name: My test playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: Installing Multiple playbook
+    yum:
+      name: ['git','wget','tree']
+      state: installed
+
