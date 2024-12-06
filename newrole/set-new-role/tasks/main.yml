@@ -1,0 +1,16 @@
+---
+# tasks file for set-new-role
+- name: Installing httpd package
+  yum:
+    name: "{{ httpd_package_name }}"
+    state: installed
+  when: ansible_os_family == "RedHat"
+  notify: start httpd service
+
+- name: Installing apache2 package
+  yum:
+    name: "{{ apache2_package_name }}"
+    state: installed
+  when: ansible_os_family == "Debian"
+  notify: start apache2 service  
+  

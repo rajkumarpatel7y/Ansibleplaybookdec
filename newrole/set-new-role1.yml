@@ -1,0 +1,6 @@
+---
+- name: Installing packages
+  hosts: all
+  become: true
+  roles:
+    - set-new-role

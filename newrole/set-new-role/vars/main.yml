@@ -1,0 +1,4 @@
+---
+# vars file for set-new-role
+httpd_package_name: httpd
+apache2_package_name: apache2
